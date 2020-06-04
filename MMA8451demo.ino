@@ -53,17 +53,10 @@ void setup(void) {
   pinMode(ledG,OUTPUT);
 
 
-  if (! mma.begin()) {
-    Serial.println("Couldnt start");
-    while (1);
-  }
-  Serial.println("MMA8451 found!");
+
   
   mma.setRange(MMA8451_RANGE_2_G);
   
-  Serial.print("Range = "); Serial.print(2 << mma.getRange());  
-  Serial.println("G");
-    
   
 }
 
@@ -87,10 +80,6 @@ void loop() {
   
   // Read the 'raw' data in 14-bit counts
   mma.read();
-  Serial.print("X:\t"); Serial.print(mma.x); 
-  Serial.print("\tY:\t"); Serial.print(mma.y); 
-  Serial.print("\tZ:\t"); Serial.print(mma.z); 
-  Serial.println();
 
   /* Get a new sensor event */ 
   sensors_event_t event; 
