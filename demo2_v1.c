@@ -1,8 +1,8 @@
 /*
- * EEPROPM_Program.c
+ * MMA_v1_Program.c
  *
  * Created: 5/3/2020 12:35:41 PM
- * Author : IB
+
  */ 
 #define F_CPU 16e6
 #include <avr/io.h>
@@ -32,9 +32,9 @@
 
 void init_ADC();
 uint16_t ADC_read(uint8_t channel);
-void init_MPU();
 
-uint16_t Digital_read();
+
+
 
 int main(void)
 {
