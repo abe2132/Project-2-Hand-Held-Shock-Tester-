@@ -178,7 +178,7 @@ if (event.acceleration.z>9){
     
     lcd.setCursor(0,3);
      lcd.print("Angle from Z:");  
-     angle_x =atan2(-(event.acceleration.y),-(event.acceleration.z))*57.2957795+180;
+     angle_x =atan2(-(event.acceleration.y),-(event.acceleration.z))+180;
      lcd.setCursor(14,3);
       lcd.print(angle_x);
      
